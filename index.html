@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+<style>
+#eye{
+    position: absolute;
+    top: 120px;
+    left: 165px;
+}
+</style>
+</head>
+<body>
+    <form>
+<h1>form</h1>
+<input type="text" placeholder="user name"><br><br>
+<input type="password" placeholder="password" id="abc"><br>
+<i class="fa fa-eye-slash" id="eye"></i>
+    </form>
+    <script>
+document.getElementById("eye").addEventListener("click",function(){
+
+    var a=document.getElementById("abc");
+
+if(a.type=="password"){
+    a.type="text";
+
+this.classlist.add("fa-eye");
+this.classlist.remove("fa-eye-slash");
+
+}
+else{
+    a.type="password";
+
+    this.classlist.remove("fa-eye");
+    this.classlist.add("fa-eye-slash");
+
+}
+})
+    </script>
+</body>
+</html>
